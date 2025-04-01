@@ -30,12 +30,12 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r meu_projeto_django/requirements.txt 
+        run: pip install -r meu_projeto/requirements.txt 
                             #Ou meu_projeto
 
       - name: Cleaning testing files
         run: |
-          cd meu_projeto_django/
+          cd meu_projeto/
           rm db.sqlite3
           rm .env
           cd ..
@@ -45,10 +45,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cd meu_projeto_django/
+          cd meu_projeto/
           zip release.zip ./* -r
           cd ..
-          mv meu_projeto_django/release.zip .
+          mv meu_projeto/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
