@@ -1,0 +1,23 @@
+{
+  "name": "meu_projeto_django",
+  "version": "1.0.0",
+  "description": "teste de testes E2E",
+  "homepage": "https://github.com/AdrianMichael5/meu_projeto_django#readme",
+  "bugs": {
+    "url": "https://github.com/AdrianMichael5/meu_projeto_django/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianMichael5/meu_projeto_django.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^14.3.0"
+  }
+}

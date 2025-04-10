@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+    <div class="bg-white p-10 rounded-xl shadow-xl text-center">
+      <h1 class="text-3xl font-bold mb-4">Bem-vindo à Dashboard</h1>
+      <p class="mb-4">
+        Você está logado como <strong>{{ request.user.username }}</strong>.
+      </p>
+      <a href="{% url 'logout' %}" class="text-red-600 hover:underline">Sair</a>
+    </div>
+  </body>
+</html>

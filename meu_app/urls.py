@@ -1,8 +1,11 @@
 from django.urls import path
-from django.contrib.auth.views import LoginView
 from . import views
+from django.shortcuts import redirect
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    path('', lambda request: redirect('login')),
+    path('login/', views.pagina_login, name='login'),
+    path('cadastro/', views.pagina_cadastro, name='cadastro'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('logout/', views.sair, name='logout'),
 ]
